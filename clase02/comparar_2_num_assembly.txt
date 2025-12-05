@@ -1,0 +1,570 @@
+
+comparar_2_num:     formato del fichero elf64-x86-64
+
+
+Desensamblado de la sección .init:
+
+0000000000001000 <_init>:
+endbr64
+sub    $0x8,%rsp
+mov    0x2fd9(%rip),%rax        # 3fe8 <__gmon_start__@Base>
+test   %rax,%rax
+je     1016 <_init+0x16>
+call   *%rax
+add    $0x8,%rsp
+ret
+
+Desensamblado de la sección .plt:
+
+0000000000001020 <.plt>:
+push   0x2f42(%rip)        # 3f68 <_GLOBAL_OFFSET_TABLE_+0x8>
+jmp    *0x2f44(%rip)        # 3f70 <_GLOBAL_OFFSET_TABLE_+0x10>
+nopl   0x0(%rax)
+endbr64
+push   $0x0
+jmp    1020 <_init+0x20>
+xchg   %ax,%ax
+endbr64
+push   $0x1
+jmp    1020 <_init+0x20>
+xchg   %ax,%ax
+endbr64
+push   $0x2
+jmp    1020 <_init+0x20>
+xchg   %ax,%ax
+endbr64
+push   $0x3
+jmp    1020 <_init+0x20>
+xchg   %ax,%ax
+endbr64
+push   $0x4
+jmp    1020 <_init+0x20>
+xchg   %ax,%ax
+endbr64
+push   $0x5
+jmp    1020 <_init+0x20>
+xchg   %ax,%ax
+endbr64
+push   $0x6
+jmp    1020 <_init+0x20>
+xchg   %ax,%ax
+endbr64
+push   $0x7
+jmp    1020 <_init+0x20>
+xchg   %ax,%ax
+endbr64
+push   $0x8
+jmp    1020 <_init+0x20>
+xchg   %ax,%ax
+endbr64
+push   $0x9
+jmp    1020 <_init+0x20>
+xchg   %ax,%ax
+endbr64
+push   $0xa
+jmp    1020 <_init+0x20>
+xchg   %ax,%ax
+endbr64
+push   $0xb
+jmp    1020 <_init+0x20>
+xchg   %ax,%ax
+
+Desensamblado de la sección .plt.got:
+
+00000000000010f0 <__cxa_finalize@plt>:
+endbr64
+jmp    *0x2efe(%rip)        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+nopw   0x0(%rax,%rax,1)
+
+Desensamblado de la sección .plt.sec:
+
+0000000000001100 <free@plt>:
+endbr64
+jmp    *0x2e6e(%rip)        # 3f78 <free@GLIBC_2.2.5>
+nopw   0x0(%rax,%rax,1)
+
+0000000000001110 <__errno_location@plt>:
+endbr64
+jmp    *0x2e66(%rip)        # 3f80 <__errno_location@GLIBC_2.2.5>
+nopw   0x0(%rax,%rax,1)
+
+0000000000001120 <strcpy@plt>:
+endbr64
+jmp    *0x2e5e(%rip)        # 3f88 <strcpy@GLIBC_2.2.5>
+nopw   0x0(%rax,%rax,1)
+
+0000000000001130 <puts@plt>:
+endbr64
+jmp    *0x2e56(%rip)        # 3f90 <puts@GLIBC_2.2.5>
+nopw   0x0(%rax,%rax,1)
+
+0000000000001140 <strtod@plt>:
+endbr64
+jmp    *0x2e4e(%rip)        # 3f98 <strtod@GLIBC_2.2.5>
+nopw   0x0(%rax,%rax,1)
+
+0000000000001150 <strlen@plt>:
+endbr64
+jmp    *0x2e46(%rip)        # 3fa0 <strlen@GLIBC_2.2.5>
+nopw   0x0(%rax,%rax,1)
+
+0000000000001160 <__stack_chk_fail@plt>:
+endbr64
+jmp    *0x2e3e(%rip)        # 3fa8 <__stack_chk_fail@GLIBC_2.4>
+nopw   0x0(%rax,%rax,1)
+
+0000000000001170 <printf@plt>:
+endbr64
+jmp    *0x2e36(%rip)        # 3fb0 <printf@GLIBC_2.2.5>
+nopw   0x0(%rax,%rax,1)
+
+0000000000001180 <strtof@plt>:
+endbr64
+jmp    *0x2e2e(%rip)        # 3fb8 <strtof@GLIBC_2.2.5>
+nopw   0x0(%rax,%rax,1)
+
+0000000000001190 <fgets@plt>:
+endbr64
+jmp    *0x2e26(%rip)        # 3fc0 <fgets@GLIBC_2.2.5>
+nopw   0x0(%rax,%rax,1)
+
+00000000000011a0 <__isoc23_strtol@plt>:
+endbr64
+jmp    *0x2e1e(%rip)        # 3fc8 <__isoc23_strtol@GLIBC_2.38>
+nopw   0x0(%rax,%rax,1)
+
+00000000000011b0 <malloc@plt>:
+endbr64
+jmp    *0x2e16(%rip)        # 3fd0 <malloc@GLIBC_2.2.5>
+nopw   0x0(%rax,%rax,1)
+
+Desensamblado de la sección .text:
+
+00000000000011c0 <_start>:
+endbr64
+xor    %ebp,%ebp
+mov    %rdx,%r9
+pop    %rsi
+mov    %rsp,%rdx
+and    $0xfffffffffffffff0,%rsp
+push   %rax
+push   %rsp
+xor    %r8d,%r8d
+xor    %ecx,%ecx
+lea    0xca(%rip),%rdi        # 12a9 <main>
+call   *0x2df3(%rip)        # 3fd8 <__libc_start_main@GLIBC_2.34>
+hlt
+cs nopw 0x0(%rax,%rax,1)
+
+00000000000011f0 <deregister_tm_clones>:
+lea    0x2e19(%rip),%rdi        # 4010 <stdin@GLIBC_2.2.5>
+lea    0x2e12(%rip),%rax        # 4010 <stdin@GLIBC_2.2.5>
+cmp    %rdi,%rax
+je     1218 <deregister_tm_clones+0x28>
+mov    0x2dd6(%rip),%rax        # 3fe0 <_ITM_deregisterTMCloneTable@Base>
+test   %rax,%rax
+je     1218 <deregister_tm_clones+0x28>
+jmp    *%rax
+nopl   0x0(%rax)
+ret
+nopl   0x0(%rax)
+
+0000000000001220 <register_tm_clones>:
+lea    0x2de9(%rip),%rdi        # 4010 <stdin@GLIBC_2.2.5>
+lea    0x2de2(%rip),%rsi        # 4010 <stdin@GLIBC_2.2.5>
+sub    %rdi,%rsi
+mov    %rsi,%rax
+shr    $0x3f,%rsi
+sar    $0x3,%rax
+add    %rax,%rsi
+sar    $1,%rsi
+je     1258 <register_tm_clones+0x38>
+mov    0x2da5(%rip),%rax        # 3ff0 <_ITM_registerTMCloneTable@Base>
+test   %rax,%rax
+je     1258 <register_tm_clones+0x38>
+jmp    *%rax
+nopw   0x0(%rax,%rax,1)
+ret
+nopl   0x0(%rax)
+
+0000000000001260 <__do_global_dtors_aux>:
+endbr64
+cmpb   $0x0,0x2dad(%rip)        # 4018 <completed.0>
+jne    1298 <__do_global_dtors_aux+0x38>
+push   %rbp
+cmpq   $0x0,0x2d82(%rip)        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+mov    %rsp,%rbp
+je     1287 <__do_global_dtors_aux+0x27>
+mov    0x2d86(%rip),%rdi        # 4008 <__dso_handle>
+call   10f0 <__cxa_finalize@plt>
+call   11f0 <deregister_tm_clones>
+movb   $0x1,0x2d85(%rip)        # 4018 <completed.0>
+pop    %rbp
+ret
+nopl   (%rax)
+ret
+nopl   0x0(%rax)
+
+00000000000012a0 <frame_dummy>:
+endbr64
+jmp    1220 <register_tm_clones>
+
+00000000000012a9 <main>:
+endbr64
+push   %rbp
+mov    %rsp,%rbp
+sub    $0x10,%rsp
+lea    0xd48(%rip),%rax        # 2004 <_IO_stdin_used+0x4>
+mov    %rax,%rdi
+call   14ff <leer_int>
+mov    %eax,-0x8(%rbp)
+lea    0xd4c(%rip),%rax        # 201a <_IO_stdin_used+0x1a>
+mov    %rax,%rdi
+call   14ff <leer_int>
+mov    %eax,-0x4(%rbp)
+mov    -0x8(%rbp),%eax
+cmp    -0x4(%rbp),%eax
+jle    12fc <main+0x53>
+mov    -0x8(%rbp),%eax
+lea    0xd47(%rip),%rdx        # 2032 <_IO_stdin_used+0x32>
+mov    %eax,%esi
+mov    %rdx,%rdi
+mov    $0x0,%eax
+call   1170 <printf@plt>
+jmp    1338 <main+0x8f>
+mov    -0x8(%rbp),%eax
+cmp    -0x4(%rbp),%eax
+jge    131f <main+0x76>
+mov    -0x4(%rbp),%eax
+lea    0xd24(%rip),%rdx        # 2032 <_IO_stdin_used+0x32>
+mov    %eax,%esi
+mov    %rdx,%rdi
+mov    $0x0,%eax
+call   1170 <printf@plt>
+jmp    1338 <main+0x8f>
+mov    -0x8(%rbp),%eax
+lea    0xd21(%rip),%rdx        # 204a <_IO_stdin_used+0x4a>
+mov    %eax,%esi
+mov    %rdx,%rdi
+mov    $0x0,%eax
+call   1170 <printf@plt>
+mov    $0x0,%eax
+leave
+ret
+
+000000000000133f <leer_string>:
+endbr64
+push   %rbp
+mov    %rsp,%rbp
+sub    $0x130,%rsp
+mov    %rdi,-0x128(%rbp)
+mov    %fs:0x28,%rax
+mov    %rax,-0x8(%rbp)
+xor    %eax,%eax
+mov    -0x128(%rbp),%rax
+lea    0xcf6(%rip),%rdx        # 2068 <_IO_stdin_used+0x68>
+mov    %rax,%rsi
+mov    %rdx,%rdi
+mov    $0x0,%eax
+call   1170 <printf@plt>
+mov    0x2c87(%rip),%rdx        # 4010 <stdin@GLIBC_2.2.5>
+lea    -0x110(%rbp),%rax
+mov    $0x100,%esi
+mov    %rax,%rdi
+call   1190 <fgets@plt>
+test   %rax,%rax
+jne    13ac <leer_string+0x6d>
+mov    $0x0,%eax
+jmp    1449 <leer_string+0x10a>
+lea    -0x110(%rbp),%rax
+mov    %rax,%rdi
+call   1150 <strlen@plt>
+mov    %rax,-0x120(%rbp)
+cmpq   $0x0,-0x120(%rbp)
+je     13fe <leer_string+0xbf>
+mov    -0x120(%rbp),%rax
+sub    $0x1,%rax
+movzbl -0x110(%rbp,%rax,1),%eax
+cmp    $0xa,%al
+jne    13fe <leer_string+0xbf>
+mov    -0x120(%rbp),%rax
+sub    $0x1,%rax
+movb   $0x0,-0x110(%rbp,%rax,1)
+subq   $0x1,-0x120(%rbp)
+mov    -0x120(%rbp),%rax
+add    $0x1,%rax
+mov    %rax,%rdi
+call   11b0 <malloc@plt>
+mov    %rax,-0x118(%rbp)
+cmpq   $0x0,-0x118(%rbp)
+jne    1429 <leer_string+0xea>
+mov    $0x0,%eax
+jmp    1449 <leer_string+0x10a>
+lea    -0x110(%rbp),%rdx
+mov    -0x118(%rbp),%rax
+mov    %rdx,%rsi
+mov    %rax,%rdi
+call   1120 <strcpy@plt>
+mov    -0x118(%rbp),%rax
+mov    -0x8(%rbp),%rdx
+sub    %fs:0x28,%rdx
+je     145d <leer_string+0x11e>
+call   1160 <__stack_chk_fail@plt>
+leave
+ret
+
+000000000000145f <leer_char>:
+endbr64
+push   %rbp
+mov    %rsp,%rbp
+sub    $0x20,%rsp
+mov    %rdi,-0x18(%rbp)
+mov    -0x18(%rbp),%rax
+mov    %rax,%rdi
+call   133f <leer_string>
+mov    %rax,-0x8(%rbp)
+cmpq   $0x0,-0x8(%rbp)
+je     1498 <leer_char+0x39>
+mov    -0x8(%rbp),%rax
+mov    %rax,%rdi
+call   1150 <strlen@plt>
+cmp    $0x1,%rax
+je     14e3 <leer_char+0x84>
+lea    0xbd1(%rip),%rax        # 2070 <_IO_stdin_used+0x70>
+mov    %rax,%rdi
+call   1130 <puts@plt>
+cmpq   $0x0,-0x8(%rbp)
+je     14ba <leer_char+0x5b>
+mov    -0x8(%rbp),%rax
+mov    %rax,%rdi
+call   1100 <free@plt>
+mov    -0x18(%rbp),%rax
+mov    %rax,%rdi
+call   133f <leer_string>
+mov    %rax,-0x8(%rbp)
+cmpq   $0x0,-0x8(%rbp)
+je     14ba <leer_char+0x5b>
+mov    -0x8(%rbp),%rax
+mov    %rax,%rdi
+call   1150 <strlen@plt>
+cmp    $0x1,%rax
+jne    14ba <leer_char+0x5b>
+mov    -0x8(%rbp),%rax
+movzbl (%rax),%eax
+mov    %al,-0x9(%rbp)
+mov    -0x8(%rbp),%rax
+mov    %rax,%rdi
+call   1100 <free@plt>
+movzbl -0x9(%rbp),%eax
+leave
+ret
+
+00000000000014ff <leer_int>:
+endbr64
+push   %rbp
+mov    %rsp,%rbp
+sub    $0x30,%rsp
+mov    %rdi,-0x28(%rbp)
+mov    %fs:0x28,%rax
+mov    %rax,-0x8(%rbp)
+xor    %eax,%eax
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   133f <leer_string>
+mov    %rax,-0x18(%rbp)
+cmpq   $0x0,-0x18(%rbp)
+jne    153f <leer_int+0x40>
+mov    $0x0,%eax
+jmp    1605 <leer_int+0x106>
+call   1110 <__errno_location@plt>
+movl   $0x0,(%rax)
+lea    -0x20(%rbp),%rcx
+mov    -0x18(%rbp),%rax
+mov    $0xa,%edx
+mov    %rcx,%rsi
+mov    %rax,%rdi
+call   11a0 <__isoc23_strtol@plt>
+mov    %rax,-0x10(%rbp)
+mov    -0x20(%rbp),%rax
+cmp    %rax,-0x18(%rbp)
+je     157b <leer_int+0x7c>
+mov    -0x20(%rbp),%rax
+movzbl (%rax),%eax
+test   %al,%al
+je     1598 <leer_int+0x99>
+lea    0xb26(%rip),%rax        # 20a8 <_IO_stdin_used+0xa8>
+mov    %rax,%rdi
+call   1130 <puts@plt>
+mov    -0x18(%rbp),%rax
+mov    %rax,%rdi
+call   1100 <free@plt>
+jmp    1616 <leer_int+0x117>
+call   1110 <__errno_location@plt>
+mov    (%rax),%eax
+cmp    $0x22,%eax
+jne    15c4 <leer_int+0xc5>
+movabs $0x7fffffffffffffff,%rax
+cmp    %rax,-0x10(%rbp)
+je     15d8 <leer_int+0xd9>
+movabs $0x8000000000000000,%rax
+cmp    %rax,-0x10(%rbp)
+je     15d8 <leer_int+0xd9>
+cmpq   $0x7fffffff,-0x10(%rbp)
+jg     15d8 <leer_int+0xd9>
+cmpq   $0xffffffff80000000,-0x10(%rbp)
+jge    15f5 <leer_int+0xf6>
+lea    0xaf9(%rip),%rax        # 20d8 <_IO_stdin_used+0xd8>
+mov    %rax,%rdi
+call   1130 <puts@plt>
+mov    -0x18(%rbp),%rax
+mov    %rax,%rdi
+call   1100 <free@plt>
+jmp    1616 <leer_int+0x117>
+mov    -0x18(%rbp),%rax
+mov    %rax,%rdi
+call   1100 <free@plt>
+mov    -0x10(%rbp),%rax
+mov    -0x8(%rbp),%rdx
+sub    %fs:0x28,%rdx
+je     1620 <leer_int+0x121>
+jmp    161b <leer_int+0x11c>
+jmp    151e <leer_int+0x1f>
+call   1160 <__stack_chk_fail@plt>
+leave
+ret
+
+0000000000001622 <leer_float>:
+endbr64
+push   %rbp
+mov    %rsp,%rbp
+sub    $0x30,%rsp
+mov    %rdi,-0x28(%rbp)
+mov    %fs:0x28,%rax
+mov    %rax,-0x8(%rbp)
+xor    %eax,%eax
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   133f <leer_string>
+mov    %rax,-0x10(%rbp)
+cmpq   $0x0,-0x10(%rbp)
+jne    1661 <leer_float+0x3f>
+pxor   %xmm0,%xmm0
+jmp    16f2 <leer_float+0xd0>
+call   1110 <__errno_location@plt>
+movl   $0x0,(%rax)
+lea    -0x18(%rbp),%rdx
+mov    -0x10(%rbp),%rax
+mov    %rdx,%rsi
+mov    %rax,%rdi
+call   1180 <strtof@plt>
+movd   %xmm0,%eax
+mov    %eax,-0x1c(%rbp)
+mov    -0x18(%rbp),%rax
+cmp    %rax,-0x10(%rbp)
+je     169b <leer_float+0x79>
+mov    -0x18(%rbp),%rax
+movzbl (%rax),%eax
+test   %al,%al
+je     16b8 <leer_float+0x96>
+lea    0xa06(%rip),%rax        # 20a8 <_IO_stdin_used+0xa8>
+mov    %rax,%rdi
+call   1130 <puts@plt>
+mov    -0x10(%rbp),%rax
+mov    %rax,%rdi
+call   1100 <free@plt>
+jmp    1703 <leer_float+0xe1>
+call   1110 <__errno_location@plt>
+mov    (%rax),%eax
+cmp    $0x22,%eax
+jne    16e1 <leer_float+0xbf>
+lea    0xa45(%rip),%rax        # 2110 <_IO_stdin_used+0x110>
+mov    %rax,%rdi
+call   1130 <puts@plt>
+mov    -0x10(%rbp),%rax
+mov    %rax,%rdi
+call   1100 <free@plt>
+jmp    1703 <leer_float+0xe1>
+mov    -0x10(%rbp),%rax
+mov    %rax,%rdi
+call   1100 <free@plt>
+movss  -0x1c(%rbp),%xmm0
+mov    -0x8(%rbp),%rax
+sub    %fs:0x28,%rax
+je     170d <leer_float+0xeb>
+jmp    1708 <leer_float+0xe6>
+jmp    1641 <leer_float+0x1f>
+call   1160 <__stack_chk_fail@plt>
+leave
+ret
+
+000000000000170f <leer_double>:
+endbr64
+push   %rbp
+mov    %rsp,%rbp
+sub    $0x30,%rsp
+mov    %rdi,-0x28(%rbp)
+mov    %fs:0x28,%rax
+mov    %rax,-0x8(%rbp)
+xor    %eax,%eax
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   133f <leer_string>
+mov    %rax,-0x18(%rbp)
+cmpq   $0x0,-0x18(%rbp)
+jne    174e <leer_double+0x3f>
+pxor   %xmm0,%xmm0
+jmp    17e1 <leer_double+0xd2>
+call   1110 <__errno_location@plt>
+movl   $0x0,(%rax)
+lea    -0x20(%rbp),%rdx
+mov    -0x18(%rbp),%rax
+mov    %rdx,%rsi
+mov    %rax,%rdi
+call   1140 <strtod@plt>
+movq   %xmm0,%rax
+mov    %rax,-0x10(%rbp)
+mov    -0x20(%rbp),%rax
+cmp    %rax,-0x18(%rbp)
+je     178a <leer_double+0x7b>
+mov    -0x20(%rbp),%rax
+movzbl (%rax),%eax
+test   %al,%al
+je     17a7 <leer_double+0x98>
+lea    0x917(%rip),%rax        # 20a8 <_IO_stdin_used+0xa8>
+mov    %rax,%rdi
+call   1130 <puts@plt>
+mov    -0x18(%rbp),%rax
+mov    %rax,%rdi
+call   1100 <free@plt>
+jmp    17f2 <leer_double+0xe3>
+call   1110 <__errno_location@plt>
+mov    (%rax),%eax
+cmp    $0x22,%eax
+jne    17d0 <leer_double+0xc1>
+lea    0x99e(%rip),%rax        # 2158 <_IO_stdin_used+0x158>
+mov    %rax,%rdi
+call   1130 <puts@plt>
+mov    -0x18(%rbp),%rax
+mov    %rax,%rdi
+call   1100 <free@plt>
+jmp    17f2 <leer_double+0xe3>
+mov    -0x18(%rbp),%rax
+mov    %rax,%rdi
+call   1100 <free@plt>
+movsd  -0x10(%rbp),%xmm0
+mov    -0x8(%rbp),%rax
+sub    %fs:0x28,%rax
+je     17fc <leer_double+0xed>
+jmp    17f7 <leer_double+0xe8>
+jmp    172e <leer_double+0x1f>
+call   1160 <__stack_chk_fail@plt>
+leave
+ret
+
+Desensamblado de la sección .fini:
+
+0000000000001800 <_fini>:
+endbr64
+sub    $0x8,%rsp
+add    $0x8,%rsp
+ret
