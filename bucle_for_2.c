@@ -13,7 +13,7 @@ int main(void)
     }
 
     printf("=== Bucle 3 ===.\n");
-    for(int i = 1; i <= 3; i++) {
+    for(int i = 6; i > 0; i = i - 2) {
         printf("UNPAZ.\n");
     }
 
