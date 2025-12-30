@@ -4,7 +4,7 @@
 void imprimirUNPAZnVeces(int n);
 
 int main(void) {
-   int cantVeces = leer_int("... ");
+   int cantVeces = leer_int("Cuántas veces querés imprimir ¡UNPAZ!? ");
    imprimirUNPAZnVeces(cantVeces);
 }
 
