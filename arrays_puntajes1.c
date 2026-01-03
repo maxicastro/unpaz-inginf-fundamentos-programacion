@@ -1,26 +1,16 @@
 #include "lib/utilidades.h"
 
-float calcular_promedio(int cantidad, float numeros[]);
-
 int main(void) {
-    const int CANTIDAD = 100;
-    float puntajes[CANTIDAD];
-    float promedio;
+    float puntajes[100];
+    float total_puntajes;
 
-    for (int i = 0; i < CANTIDAD; i++) {
-        puntajes[i] = leer_float("Ingrese el %d puntaje: ", i + 1);
+    for (int i = 0; i < 100; i++) {
+        puntajes[i] = leer_float("Ingrese el puntaje: ");
     }
 
-    promedio = calcular_promedio(CANTIDAD, puntajes);
-
-    printf("Promedio: %.2f.\n", promedio);
-}
-
-float calcular_promedio(int cantidad, float numeros[]) {
-    float suma = 0;
-
-    for (int i = 0; i < cantidad; i++) {
-        suma = suma + numeros[i];
+    for (int i = 0; i < 100; i++) {
+        total_puntajes = total_puntajes + puntajes[i];
     }
-    return suma / cantidad;
+
+    printf("Promedio: %2f.\n", total_puntajes / 100);
 }
