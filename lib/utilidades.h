@@ -5,7 +5,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 // -----------------------------------------------------------------------
 // 1. Definición de 'string' como alias simple a 'char *'
