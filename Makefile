@@ -3,8 +3,8 @@
 # ------------------------------
 # VARIABLES DE COMPILACIÓN
 # ------------------------------
-CC = gcc
-CFLAGS = -Wall -g
+CC = gcc-14
+CFLAGS = -Wall -g -std=c23
 UTIL_NAME = utilidades
 UTIL_DIR = lib
 UTIL_SRC = $(UTIL_DIR)/$(UTIL_NAME).c
