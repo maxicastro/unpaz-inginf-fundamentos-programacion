@@ -11,7 +11,7 @@ int main(void)
         total += numero;
         printf("Total parcial: %d\n", total);
 
-        continuar = leer_char("¿Querés sumar otro número?': ");
+        continuar = leer_char("¿Querés sumar otro número?: ");
 
     } while (continuar == 's' || continuar == 'S');
 
