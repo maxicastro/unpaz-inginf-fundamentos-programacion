@@ -4,7 +4,7 @@
 # VARIABLES DE COMPILACIÓN
 # ------------------------------
 CC = gcc-14
-CFLAGS = -Wall -g -std=c23
+CFLAGS = -Wall -g -std=gnu23 -D_USE_MATH_DEFINES
 UTIL_NAME = utilidades
 UTIL_DIR = lib
 UTIL_SRC = $(UTIL_DIR)/$(UTIL_NAME).c
@@ -12,6 +12,9 @@ UTIL_HDR = $(UTIL_DIR)/$(UTIL_NAME).h
 UTIL_OBJ = $(UTIL_DIR)/$(UTIL_NAME).o
 # Indicamos al compilador dónde buscar los encabezados con -I
 INCLUDE_FLAGS = -I$(UTIL_DIR)
+
+# Flag para la librería matemática
+LDFLAGS = -lm
 
 # ------------------------------
 # 1. REGLA PARA CREAR EL OBJETO DE LA LIBRERÍA (make lib)
@@ -30,4 +33,4 @@ $(UTIL_OBJ): $(UTIL_SRC) $(UTIL_HDR)
 # ------------------------------
 # El INCLUDE_FLAGS es crucial para que el ejercicio pueda encontrar utilidades.h
 %: %.c $(UTIL_OBJ)
-	$(CC) $(CFLAGS) $(INCLUDE_FLAGS) $^ -o $@
+	$(CC) $(CFLAGS) $(INCLUDE_FLAGS) $^ -o $@ $(LDFLAGS)
